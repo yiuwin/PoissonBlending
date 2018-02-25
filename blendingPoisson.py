@@ -129,10 +129,7 @@ print ("\n\n")
 '''
 
 """
-TODO 5 
 Construct matrix A & B
-
-add your code here
 """
 print ("***** Generating Matrices Ab, Ag, Ar *****")
 
@@ -150,12 +147,8 @@ Ag = Ag.tocsc()
 Ar = Ar.tocsc()
 
 """
-TODO 6  
 extract final result from R
-
 Solve Ax = b for each of B,G,R
-
-add your code here
 """
 
 print ("***** Solving X for AX = B *****")
@@ -168,8 +161,6 @@ Rr = scipy.sparse.linalg.spsolve(Ar,Br)
 Rr = np.reshape(Rr, (rows,cols))
 
 merged = cv2.merge((Rb,Rg,Rr))
-#cv2.imshow("back",backImg)
-#cv2.imshow("fore",foreImg)
 cv2.imshow("merged",merged)
 #print (time.time() - start)
 cv2.waitKey(0)
